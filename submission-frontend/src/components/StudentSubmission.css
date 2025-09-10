@@ -1,0 +1,325 @@
+/* StudentSubmissions.css */
+
+.student-submissions-wrapper {
+  min-height: 100vh;
+  transition: background-color 0.3s;
+}
+
+.student-submissions-wrapper.light {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.student-submissions-wrapper.dark {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* Header styles */
+.header {
+  border-bottom: 1px solid;
+  padding: 1.5rem 0;
+}
+
+.header.light {
+  background-color: #ffffff;
+  border-color: #e5e7eb;
+}
+
+.header.dark {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.main-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #f3f4f6;
+}
+
+.header.dark .logo-icon {
+  background-color: #374151;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.header.dark .subtitle {
+  color: #9ca3af;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dark-toggle {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+}
+
+.header.dark .dark-toggle {
+  background-color: #374151;
+  color: #facc15;
+}
+
+.live-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.live-icon {
+  color: #10b981;
+}
+
+/* Stats Cards */
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+}
+
+.card-icon {
+  float: right;
+  color: #3b82f6;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+}
+
+.card.success .card-icon {
+  color: #10b981;
+}
+
+.card.failure .card-icon {
+  color: #ef4444;
+}
+
+.student-submissions-wrapper.dark .card {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+.student-submissions-wrapper.dark .card-title {
+  color: #9ca3af;
+}
+
+.student-submissions-wrapper.dark .card-value {
+  color: #ffffff;
+}
+
+/* Filters */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  position: relative;
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.search-input input {
+  width: 100%;
+  padding: 0.5rem 1rem 0.5rem 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.search-input .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.filter-options select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+.student-submissions-wrapper.dark .table-container {
+  background-color: #1f2937;
+}
+
+.submission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.submission-table th,
+.submission-table td {
+  text-align: left;
+  padding: 1rem;
+  font-size: 0.875rem;
+}
+
+.submission-table th {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.student-submissions-wrapper.dark .submission-table th {
+  background-color: #374151;
+  color: #9ca3af;
+}
+
+.submission-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.student-submissions-wrapper.dark .submission-table tr:hover {
+  background-color: #4b5563;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.student-name {
+  font-weight: 500;
+}
+
+.student-role {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.student-submissions-wrapper.dark .student-role {
+  color: #9ca3af;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.badge.success.light {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border-color: #d1fae5;
+}
+
+.badge.failure.light {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border-color: #fecaca;
+}
+
+.badge.success.dark {
+  background-color: #064e3b;
+  color: #34d399;
+  border-color: #065f46;
+}
+
+.badge.failure.dark {
+  background-color: #7f1d1d;
+  color: #f87171;
+  border-color: #991b1b;
+}
+
+.commit-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.commit-icon {
+  color: #9ca3af;
+}
+
+.commit-count {
+  font-weight: 500;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.no-results-icon {
+  color: #9ca3af;
+  margin-bottom: 1rem;
+}
