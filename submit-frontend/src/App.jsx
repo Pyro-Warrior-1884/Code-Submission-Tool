@@ -63,7 +63,7 @@ function App() {
       name: studentName,
       code: fileContent,
       timestamp: formattedTime,
-      status: 'Pending' // ✅ This line fixes the 400 error
+      status: 'Pending'
     };
 
     try {
