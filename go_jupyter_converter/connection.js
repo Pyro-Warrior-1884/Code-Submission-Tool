@@ -91,7 +91,7 @@ async function listenAndCompile() {
       }
     }
 
-    await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3s before next check
+    await new Promise(resolve => setTimeout(resolve, 3000));
   }
 }
 
